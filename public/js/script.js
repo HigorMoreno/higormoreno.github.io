@@ -65,7 +65,9 @@ function carregar(json){
 	document.querySelector('.condicoes').innerHTML = reference.productInfo.paymentConditions;
 
 	var recomendacoes = json.data.recommendation;
-	recomendacoes.forEach(montarSugestao)
+	recomendacoes.forEach(montarSugestao);
+
+	iniciarNavegacao(json.data.widget.size)
 
 }
 
@@ -74,7 +76,6 @@ function montarSugestao(element, index, array){
 	var sugestao = document.createElement('div');
 	sugestao.className = 'produto';
 	sugestao.innerHTML = produto;
-	console.log(sugestao.outerHTML);
 	sugestao.querySelector('a').href = 'http:' + element.detailUrl;
 
 	sugestao.querySelector('img').src = 'http:' + element.imageName;

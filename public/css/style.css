@@ -7,6 +7,10 @@ a{
 }
 li{
 	display: inline-block;
+	padding-right: 20px;
+}
+ul{
+	padding: 0;
 }
 .container{
 	width: 1000px;
@@ -97,5 +101,62 @@ li{
 	display: block;
 	width: 780px;
 	height: 300px;
+	position: relative;
+}
+
+.box{
+	float: left;
+	display: block;
+	width: 730px;
+	height: 300px;
+	margin-left: 20px;
 	overflow: hidden;
+	position: relative;
+}
+
+.avancar{
+	position: absolute;
+	height: 100%;
+	width: 20px;
+	box-shadow: -30px 60px 70px 50px rgba(255,255,255,1);
+	right: 0;
+	top:0;
+}
+
+.avancar:after{
+	content: '';
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid black;
+	display: block;	
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -10px;	
+	z-index: 999;
+}
+
+.voltar{
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid black;
+	display: block;	
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -10px;	
+	z-index: 999;
+}
+ul{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.avancar.disabled:after{
+	border-left-color:grey;
+}
+
+.voltar.disabled{
+	border-right-color:grey;
 }
