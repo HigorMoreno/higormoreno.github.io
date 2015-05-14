@@ -1,76 +1,6 @@
 var produto;
 
 produto = document.querySelector('.produto').innerHTML;	
-// function GetXmlHttpObject() {
-// 	var xmlHttp = null;
-// 	try {
-//         // Firefox, Opera 8.0+, Safari
-//         xmlHttp = new XMLHttpRequest();
-//     } catch (e) {
-//         // Internet Explorer
-//         try {
-//         	xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
-//         } catch (e) {
-//         	xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-//         }
-//     }
-//     return xmlHttp;
-// }
-
-// var xmlhttp = GetXmlHttpObject();
-// xmlhttp.onreadystatechange=function()
-// {
-// 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-// 	{
-// 		carregar(xmlhttp.responseText);
-// 	}
-// }
-// xmlhttp.open("GET","http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X",true);
-// xmlhttp.send();
-
-
-// function createCORSRequest(method, url) {
-// 	var xhr = new XMLHttpRequest();
-// 	xhr.withCredentials = true;
-// 	if ("withCredentials" in xhr) {
-
-//     // Check if the XMLHttpRequest object has a "withCredentials" property.
-//     // "withCredentials" only exists on XMLHTTPRequest2 objects.
-//     xhr.open(method, url, true);
-
-// } else if (typeof XDomainRequest != "undefined") {
-
-//     // Otherwise, check if XDomainRequest.
-//     // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-//     xhr = new XDomainRequest();
-//     xhr.open(method, url);
-
-// } else {
-
-//     // Otherwise, CORS is not supported by the browser.
-//     xhr = null;
-
-// }
-// return xhr;
-// }
-
-// var xhr = createCORSRequest('GET', "http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X");
-// console.log(xhr);
-// if (!xhr) {
-// 	throw new Error('CORS not supported');
-// }
-
-// xhr.send();
-
-// xhr.onload = function() {
-//  var responseText = xhr.responseText;
-//  console.log(responseText);
-//  // process the response.
-// };
-
-// xhr.onerror = function() {
-//   console.log('There was an error!');
-// };
 
 var $jsonp = (function(){
   var that = {};
@@ -124,13 +54,13 @@ function carregar(json){
 	document.querySelector('.titulo').innerText = reference.name;
 
 	if(reference.oldPrice != null){
-		document.querySelector('.preco-de .valor').innerText = reference.oldPrice;
+		document.querySelector('.preco-de span').innerText = reference.oldPrice;
 	}
 	else{
 		document.querySelector('.preco-de').remove();
 	}
 
-	document.querySelector('.preco-por').innerText = reference.price;
+	document.querySelector('.preco-por span').innerText = reference.price;
 
 	document.querySelector('.condicoes').innerHTML = reference.productInfo.paymentConditions;
 
@@ -138,14 +68,13 @@ function carregar(json){
 	recomendacoes.forEach(montarSugestao)
 
 }
-var sugestoes;
+
 function montarSugestao(element, index, array){
-	console.log(element);
 
 	var sugestao = document.createElement('div');
 	sugestao.className = 'produto';
 	sugestao.innerHTML = produto;
-	
+	console.log(sugestao.outerHTML);
 	sugestao.querySelector('a').href = 'http:' + element.detailUrl;
 
 	sugestao.querySelector('img').src = 'http:' + element.imageName;
@@ -153,18 +82,17 @@ function montarSugestao(element, index, array){
 	sugestao.querySelector('.titulo').innerText = element.name;
 
 	if(element.oldPrice != null){
-		sugestao.querySelector('.preco-de .valor').innerText = element.oldPrice;
+		sugestao.querySelector('.preco-de span').innerText = element.oldPrice;
 	}
 	else{
 		sugestao.querySelector('.preco-de').remove();
 	}
 
-	sugestao.querySelector('.preco-por').innerText = element.price;
+	sugestao.querySelector('.preco-por span').innerText = element.price;
 
 	sugestao.querySelector('.condicoes').innerHTML = element.productInfo.paymentConditions;
-	console.log(sugestao);
 	
-	document.querySelector('ul').innerHTML += '<li>'+sugestao.innerHTML+'</li>';
+	document.querySelector('ul').innerHTML += '<li>'+sugestao.outerHTML+'</li>';
 	
 
 }

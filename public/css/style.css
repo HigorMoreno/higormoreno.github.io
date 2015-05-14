@@ -1,9 +1,23 @@
 body{
 	font-family: Arial;
 }
+a{
+	color:black;
+	text-decoration: none;
+}
+li{
+	display: inline-block;
+}
 .container{
-	width: 900px;
+	width: 1000px;
+	height: 400px;
 
+}
+
+.conteudo{
+
+	width: 1000px;
+	height: 400px;
 }
 .cabecalho{
 	float: left;
@@ -21,11 +35,67 @@ body{
 
 .titulo-visitado{
 	float: left;
-	width: 200px;
+	width: 180px;
 }
 
 .titulo-sugestoes{
 	float: left;
 	padding-left: 10px;
 
+}
+
+.visitado{
+	float: left;
+	width: 180px;
+	height: 300px;
+	border-right: 1px solid rgb(223, 220, 220);
+	margin-right: 10px;
+	padding-right: 10px;	
+}
+
+.produto{
+	float:left;
+	width:170px	;
+	font-size: 12px;
+	padding: 5px;
+}
+
+.produto img{
+	width: 100%;
+}
+
+.titulo{
+	display: block;
+}
+
+.preco-de{
+	display: block;
+	color: red;
+}
+
+.preco-por{
+	display: block;	
+	color:red;
+}
+
+.preco-de span{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.preco-por span{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.condicoes{
+	color:red;
+}
+
+.sugestoes{
+	float: left;
+	display: block;
+	width: 780px;
+	height: 300px;
+	overflow: hidden;
 }
