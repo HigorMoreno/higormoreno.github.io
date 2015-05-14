@@ -67,7 +67,7 @@ function carregar(json){
 	var recomendacoes = json.data.recommendation;
 	recomendacoes.forEach(montarSugestao);
 
-	iniciarNavegacao(json.data.widget.size)
+	iniciarNavegacao(json.data.widget.size);
 
 }
 

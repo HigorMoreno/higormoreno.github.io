@@ -7,10 +7,15 @@ a{
 }
 li{
 	display: inline-block;
-	padding-right: 20px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+li:hover{
+	background: linear-gradient(to bottom, rgba(173,215,255,1) 0%, rgba(245,245,245,1) 100%);	
 }
 ul{
 	padding: 0;
+	margin:0;
 }
 .container{
 	width: 1000px;
@@ -26,7 +31,7 @@ ul{
 .cabecalho{
 	float: left;
 	width: 100%;
-	background:rgb(205, 229, 249);
+	background: linear-gradient(to bottom, rgba(201,244,255,1) 0%, rgba(174,235,252,1) 41%, rgba(116,207,232,1) 100%);
 	padding: 10px;
 }
 
@@ -54,7 +59,8 @@ ul{
 	height: 300px;
 	border-right: 1px solid rgb(223, 220, 220);
 	margin-right: 10px;
-	padding-right: 10px;	
+	padding-right: 10px;
+	margin-top: 15px;	
 }
 
 .produto{
@@ -102,6 +108,7 @@ ul{
 	width: 780px;
 	height: 300px;
 	position: relative;
+
 }
 
 .box{
@@ -151,6 +158,7 @@ ul{
 	position: absolute;
 	top: 0;
 	left: 0;
+	-webkit-transition: left 0.4s;
 }
 
 .avancar.disabled:after{
