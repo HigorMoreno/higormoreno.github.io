@@ -1,23 +1,43 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Vitrine</title>
+   <link rel="stylesheet" type="text/css" href="public/css/style.css">
+</head>
+<body>
+   <div class="container">
+      <div class="cabecalho">
+         <span class="titulo-visitado">Você visitou:</span>
+         <span class="titulo-sugestao">e talvez se interesse por:</span>
+      </div>
+      <div class="conteudo">
+         <div class="visitado">
+            <div class="produto">
+               <a href="">
+                  <img src=""/>
+                  <span class="titulo"></span>
+                  <span class="preco-de">
+                     De:
+                     <span class="valor">1100,00</span>
+                  </span>
+                  <span>
+                     Por:
+                     <span class="preco-por"> 1.199,00</span>
+                  </span>
+                  <span class="condicoes">
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+                  </span>
+               </a>
+            </div>
+         </div>
+         <div class="sugestoes">
+            <ul>
+            
+            </ul>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="public/js/script.js"></script>
+</body>
+</html>

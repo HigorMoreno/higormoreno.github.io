@@ -1,0 +1,31 @@
+body{
+	font-family: Arial;
+}
+.container{
+	width: 900px;
+
+}
+.cabecalho{
+	float: left;
+	width: 100%;
+	background:rgb(205, 229, 249);
+	padding: 10px;
+}
+
+.cabecalho span{
+	font-size: 16px;
+	font-weight: bold;
+	color:blue;
+	display: inline-block;
+}
+
+.titulo-visitado{
+	float: left;
+	width: 200px;
+}
+
+.titulo-sugestoes{
+	float: left;
+	padding-left: 10px;
+
+}
