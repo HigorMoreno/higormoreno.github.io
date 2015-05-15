@@ -136,7 +136,7 @@ ul{
 	content: '';
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
-	border-left: 20px solid black;
+	border-left: 20px solid #2893f7;
 	display: block;	
 	position: absolute;
 	right: 20px;
@@ -148,7 +148,7 @@ ul{
 .voltar{
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
-	border-right: 20px solid black;
+	border-right: 20px solid #2893f7;
 	display: block;	
 	position: absolute;
 	left: 0;
