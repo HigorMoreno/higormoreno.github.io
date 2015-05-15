@@ -18,7 +18,7 @@ ul{
 	margin:0;
 }
 .container{
-	width: 1000px;
+	width: 930px;
 	height: 400px;
 
 }
@@ -125,6 +125,8 @@ ul{
 	position: absolute;
 	height: 100%;
 	width: 20px;
+	-moz-box-shadow: -30px 60px 70px 50px rgba(255,255,255,1);
+	-webkit-box-shadow: -30px 60px 70px 50px rgba(255,255,255,1);
 	box-shadow: -30px 60px 70px 50px rgba(255,255,255,1);
 	right: 0;
 	top:0;
